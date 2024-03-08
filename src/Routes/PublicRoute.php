@@ -15,6 +15,7 @@ class PublicRoute implements IRoute{
             }
         },['get'],false);
 
+        // /tualocms/page/fontawesome/free/css/all.min.css
         BasicRoute::add('/tualocms/page/fontawesome/(?P<file>[\/.\w\d\-\_\.]+)'.'',function($matches){
             if (file_exists( dirname(__DIR__,2).'/lib/'.$matches['file']) ){
                 App::etagFile( dirname(__DIR__,2).'/lib/'.$matches['file'] , true);
