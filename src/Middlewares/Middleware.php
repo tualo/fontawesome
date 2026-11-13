@@ -13,8 +13,7 @@ class Middleware implements IMiddleware
         TualoApplication::use('fontawesome', function () {
             try {
 
-                // TualoApplication::stylesheet("./fontawesome/6.7.1/css/all.min.css" );
-
+                TualoApplication::stylesheet("./fontawesome/7.3.1/css/all.min.css");
             } catch (\Exception $e) {
                 TualoApplication::set('maintanceMode', 'on');
                 TualoApplication::addError($e->getMessage());
